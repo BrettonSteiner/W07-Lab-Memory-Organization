@@ -1,6 +1,6 @@
-#include 
-#include 
-#include 
+#include <iostream>
+#include <iomanip>
+//#include 
 using namespace std;
 
 void one(long number);
