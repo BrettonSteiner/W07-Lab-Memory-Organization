@@ -93,11 +93,18 @@ void two(long number)              // 345678
         << "-------------------+"
         << "-------------------+"
         << "-----------------+\n";
-        for (long i = 24; i >= -4; i--)
+
+   for (long i = 64; i >= -200; i -= 8)
    {
       ////////////////////////////////////////////////
       // Insert code here to display the callstack
-      
+      void* offset = (void*)two + i;
+      cout << '[' << setw(4) << i << ']'
+           << setw(13) << offset
+           << setw(20) << hex << *(int*)offset
+           << setw(20) << dec << *(int*)offset
+           << setw(18) << displayCharArray((char*)offset)
+           << endl;
       //
       ////////////////////////////////////////////////
    }
