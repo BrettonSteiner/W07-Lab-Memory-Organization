@@ -99,8 +99,8 @@ void two(long number)              // 345678
       ////////////////////////////////////////////////
       // Insert code here to display the callstack
       void* offset = (void*)(&bow) + i * 8;
-      cout << '[' << setw(4) << i << ']'
-           << setw(13) << offset
+      cout << '[' << setw(2) << i << ']'
+           << setw(15) << offset
            << setw(20) << hex << *(int*)offset
            << setw(20) << dec << *(int*)offset
            << setw(18) << displayCharArray((char*)offset)
