@@ -94,11 +94,11 @@ void two(long number)              // 345678
         << "-------------------+"
         << "-----------------+\n";
 
-   for (long i = 64; i >= -200; i -= 8)
+   for (long i = 24; i >= -4; i--)
    {
       ////////////////////////////////////////////////
       // Insert code here to display the callstack
-      void* offset = (void*)two + i;
+      void* offset = (void*)(&bow) + i * 8;
       cout << '[' << setw(4) << i << ']'
            << setw(13) << offset
            << setw(20) << hex << *(int*)offset
