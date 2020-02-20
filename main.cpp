@@ -101,8 +101,8 @@ void two(long number)              // 345678
       void* offset = (void*)(&bow) + i * 8;
       cout << '[' << setw(2) << i << ']'
            << setw(15) << offset
-           << setw(20) << hex << *(int*)offset
-           << setw(20) << dec << *(int*)offset
+           << setw(20) << showbase << hex << *(long*)offset
+           << setw(20) << dec << *(long*)offset
            << setw(18) << displayCharArray((char*)offset)
            << endl;
       //
