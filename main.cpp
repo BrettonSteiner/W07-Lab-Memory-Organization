@@ -113,21 +113,19 @@ void two(long number)              // 345678
    // Insert code here to change the variables in main()
                                                                                 
    // change text in main() to "*main**"
-   *(char*)((void*)(&bow) + 153) = 'm';
-   *(char*)((void*)(&bow) + 154) = 'a';
-   *(char*)((void*)(&bow) + 155) = 'i';
-   *(char*)((void*)(&bow) + 156) = 'n';
+   *(char*)((void*)(&bow) + 19 * 8 + 1) = 'm';
+   *(char*)((void*)(&bow) + 19 * 8 + 2) = 'a';
+   *(char*)((void*)(&bow) + 19 * 8 + 3) = 'i';
+   *(char*)((void*)(&bow) + 19 * 8 + 4) = 'n';
 
    // change number in main() to 654321
    *(long*)((void*)(&bow) + 22 * 8) = 654321;
    
    // change pointerFunction in main() to point to pass
-   void (*func)() = (void (*)())((void*)(&bow) + 24 * 8);
-   func = pass;
+   *(long*)((void*)(&bow) + 21 * 8) = (long)pass;
 
    // change message in main() to point to passMessage
-   const char* message = (const char*)((void*)(&bow) + 19 * 8);
-   message = passMessage;
+   *(long*)((void*)(&bow) + 20 * 8) = (long)passMessage;
 
    //
    ////////////////////////////////////////////////
