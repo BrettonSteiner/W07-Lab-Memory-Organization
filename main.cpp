@@ -122,8 +122,12 @@ void two(long number)              // 345678
    *(long*)((void*)(&bow) + 22 * 8) = 654321;
    
    // change pointerFunction in main() to point to pass
+   void (*func)() = (void (*)())((void*)(&bow) + 24 * 8);
+   func = pass;
 
    // change message in main() to point to passMessage
+   const char* message = (const char*)((void*)(&bow) + 19 * 8);
+   message = passMessage;
 
    //
    ////////////////////////////////////////////////
