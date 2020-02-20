@@ -1,6 +1,6 @@
+#include <string>
 #include <iostream>
 #include <iomanip>
-//#include 
 using namespace std;
 
 void one(long number);
@@ -93,11 +93,18 @@ void two(long number)              // 345678
         << "-------------------+"
         << "-------------------+"
         << "-----------------+\n";
-        for (long i = 24; i >= -4; i--)
+
+   for (long i = 24; i >= -4; i--)
    {
       ////////////////////////////////////////////////
       // Insert code here to display the callstack
-      
+      void* offset = (void*)(&bow) + i * 8;
+      cout << '[' << setw(2) << i << ']'
+           << setw(15) << offset
+           << setw(20) << hex << *(int*)offset
+           << setw(20) << dec << *(int*)offset
+           << setw(18) << displayCharArray((char*)offset)
+           << endl;
       //
       ////////////////////////////////////////////////
    }
@@ -106,12 +113,19 @@ void two(long number)              // 345678
    // Insert code here to change the variables in main()
                                                                                 
    // change text in main() to "*main**"
+   *(char*)((void*)(&bow) + 19 * 8 + 1) = 'm';
+   *(char*)((void*)(&bow) + 19 * 8 + 2) = 'a';
+   *(char*)((void*)(&bow) + 19 * 8 + 3) = 'i';
+   *(char*)((void*)(&bow) + 19 * 8 + 4) = 'n';
 
    // change number in main() to 654321
-
+   *(long*)((void*)(&bow) + 22 * 8) = 654321;
+   
    // change pointerFunction in main() to point to pass
+   *(long*)((void*)(&bow) + 21 * 8) = (long)pass;
 
    // change message in main() to point to passMessage
+   *(long*)((void*)(&bow) + 20 * 8) = (long)passMessage;
 
    //
    ////////////////////////////////////////////////
