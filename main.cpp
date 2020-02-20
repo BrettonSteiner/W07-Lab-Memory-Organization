@@ -113,13 +113,14 @@ void two(long number)              // 345678
    // Insert code here to change the variables in main()
                                                                                 
    // change text in main() to "*main**"
-   *(char*)((void*)(&bow) + 152) = 'm';
-   *(char*)((void*)(&bow) + 153) = 'a';
-   *(char*)((void*)(&bow) + 154) = 'i';
-   *(char*)((void*)(&bow) + 155) = 'n';
+   *(char*)((void*)(&bow) + 153) = 'm';
+   *(char*)((void*)(&bow) + 154) = 'a';
+   *(char*)((void*)(&bow) + 155) = 'i';
+   *(char*)((void*)(&bow) + 156) = 'n';
 
    // change number in main() to 654321
-
+   *(long*)((void*)(&bow) + 22 * 8) = 654321;
+   
    // change pointerFunction in main() to point to pass
 
    // change message in main() to point to passMessage
