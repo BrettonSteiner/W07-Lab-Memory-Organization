@@ -13,7 +13,7 @@ using namespace std;
 *    Tyler Starr
 *
 * Summary:
-*    Enter a brief description of your program here!
+*    Lab to show memory organization of the stack and changing stack variables.
  ************************************************************************/
 void one(long number);
 void two(long number);
