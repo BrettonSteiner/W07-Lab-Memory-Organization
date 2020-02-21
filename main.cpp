@@ -2,7 +2,19 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
+/***********************************************************************
+* Program:
+*    Lab 07, Lab Memory Organzation
+*    Brother Helfrich, CS 370
+* Author:
+*    John Miller
+*    Bretton Steiner
+*	 Ben Smith
+*    Tyler Starr
+*
+* Summary:
+*    Enter a brief description of your program here!
+ ************************************************************************/
 void one(long number);
 void two(long number);
 void pass() { cout << "You pass :)\n"; }
